@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom';
+import ContentsSquare from '../container/ContentsSquare.js';
 
 class About extends Component {
   render() {
     return (
-      <about-element></about-element>
+      <main id="about">
+        <ContentsSquare></ContentsSquare>
+      </main>
     );
   }
 }
