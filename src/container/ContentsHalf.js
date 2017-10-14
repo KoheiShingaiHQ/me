@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
 import Content from '../container/Content.js';
 
 class ContentsHalf extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <section id="contents-half">
