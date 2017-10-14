@@ -88,7 +88,7 @@ class ContentGithub extends Component {
     return (
       <section className={"content-github " + this.props.language}>
         { (!this.props.post) ? 
-          <a target="_blank" href={this.props.link}>
+          <a target="_blank" href={this.state.link}>
             <h3 className="en repository">See Repository</h3>
             <h3 className="ja repository">リポジトリを見る</h3>
           </a> :
