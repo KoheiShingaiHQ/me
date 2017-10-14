@@ -31,6 +31,7 @@ class Nav extends Component {
   changeSearchInput(e) {
     this.setState({ result : [] });
     this.setState({ related : [] });
+    this.setState({ results : [] });
     var self = this;
     var sugest = this.state.sugest || [];
     var word = document.getElementById('search-input').value;
@@ -71,7 +72,7 @@ class Nav extends Component {
            </a>        
          );
        }
-    self.setState({ results : results });
+      self.setState({ results : results });
     }
     function getResult(key, val) {
       for (var i in val) {
@@ -120,8 +121,8 @@ class Nav extends Component {
         <section id="search-result">
           <p className="en">{"Keyword : " + this.state.input}</p>
           <p className="ja">{"キーワード : " + this.state.input}</p>
-          <p className="en">{"Sugested : " + this.state.related.join(", ")}</p>
-          <p className="ja">{"候補 : " + this.state.related.join(", ")}</p>
+          <p className="en">{"Sugested : " + Array.from(new Set(this.state.related)).join(", ")}</p>
+          <p className="ja">{"候補 : " + Array.from(new Set(this.state.related)).join(", ")}</p>
           <p className="en">{"Result : " + this.state.result.length + " results"}</p>
           <p className="ja">{"結果 : " + this.state.result.length + " 件"}</p>
           <section id="result-output">{this.state.results}</section>
