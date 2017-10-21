@@ -15,6 +15,7 @@ const components = {
 class ContentPanel extends Component {
   initContent(id) {
     var pathName = 'article/' + id;
+    document.getElementsByTagName("footer")[0].style.display = "none";
     localStorage.language = localStorage.language || 'english';
     var langStorage = localStorage.language.substring(0, 2);
     var contentPanel = document.getElementById("content-panel");
@@ -45,6 +46,7 @@ class ContentPanel extends Component {
         var element = React.createElement(components[data.type], props);
         ReactDOM.render(element, document.getElementById("content-" + sectionId));
       }
+      document.getElementsByTagName("footer")[0].style.display = "block";
     });
   }
   componentWillReceiveProps(nextProps) {

@@ -13,7 +13,7 @@ class ContentsSquare extends Component {
       contents.push(
         <li key={data[i].main}>
           <a href={(data[i].href.indexOf("http") !== -1) ? data[i].href : "#" + data[i].href} target={(data[i].href.indexOf("http") !== -1) ? "_blank" : ""}>
-            <div style={{backgroundImage:"url("+ data[i].image +")"}}>
+            <div style={{backgroundImage:"url("+ data[i].image +")",backgroundSize:data[i].size}}>
               <ContentLabel main={data[i].main} sub={data[i].sub}></ContentLabel>
             </div>
           </a>

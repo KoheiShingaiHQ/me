@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
 import ContentsFull from '../container/ContentsFull.js';
-import ContentsHalf from '../container/ContentsHalf.js';
 
 class Featured extends Component {
   constructor(props) {
@@ -11,7 +10,6 @@ class Featured extends Component {
     return (
       <main id="featured">
         <ContentsFull></ContentsFull>
-        <ContentsHalf></ContentsHalf>
       </main>
     );
   }
