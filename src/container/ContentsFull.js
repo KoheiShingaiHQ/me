@@ -13,18 +13,21 @@ class ContentsFull extends Component {
 
 var contents = [];
 var data = [
-  {main: "Article 1", sub: 'Something about this article 1'},
-  {main: "Article 2", sub: 'Something about this article 2'},
-  {main: "Article 3", sub: 'Something about this article 3'},
+  {main: "About", sub: '- about me -', href: '/'},
+  {main: "Certification", sub: '- about my certification -', href: '/article/certification'},
+  {main: "Activity", sub: '- about my activity -', href: '/article/activity'},
 ];
 for(var i in data){
+  var href = data[i].href ? "#" + data[i].href : "";
   contents.push(
-    <li key={data[i].main}>
-      <div>
-        <Content full_main={data[i].main} full_sub={data[i].sub}></Content>
-        <div></div>
-      </div>
-    </li>  
+    <a style={{textDecoration:"none"}} key={i} href={(href.indexOf("http") !== -1 || href === "") ? href.split("#").join("") : href} target={(href.indexOf("http") !== -1) ? "_blank" : ""}>
+      <li style={{backgroundImage:"url("+ data[i].image +")",height:data[i].height,opacity:data[i].opacity}}>
+        <div>
+          <Content full_main={data[i].main} full_sub={data[i].sub}></Content>
+          <div></div>
+        </div>
+      </li>  
+    </a>
   );
 }
 
