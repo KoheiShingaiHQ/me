@@ -15,6 +15,7 @@ class SidePanel extends Component {
     localStorage.language = localStorage.language || 'english';
     var langStorage = localStorage.language.substring(0, 2);
     var sidePanel = document.getElementById("side-panel");
+    sidePanel.innerHTML = "";
     var removes = sidePanel.querySelectorAll("[data-removal='true']");
     for (var e of removes) { e.parentNode.removeChild(e) }
     var side = firebaseDb.ref(pathName + "/side_" + langStorage);
