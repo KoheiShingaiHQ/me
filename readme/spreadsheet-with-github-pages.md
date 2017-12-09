@@ -1,6 +1,4 @@
 # Coming soon
-I'll update more details this week.
-
 ![capture](https://raw.githubusercontent.com/KoheiShingaiHQ/mauth/master/public/koheishingaiHQCapture.gif)
 
 # Recipe
