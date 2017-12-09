@@ -9,6 +9,7 @@ class SideRelated extends Component {
     localStorage.language = localStorage.language || 'english';
     var langStorage = localStorage.language.substring(0, 2);
     var sideRelated = document.getElementById("related");
+    sideRelated.innerHTML = "";
     var removes = sideRelated.querySelectorAll("[data-removal='true']");
     for (var e of removes) { e.parentNode.removeChild(e) }
     var related = firebaseDb.ref(pathName + "/side_"+ langStorage +"/related");

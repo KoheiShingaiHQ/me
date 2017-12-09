@@ -5,4 +5,4 @@
 * Google Apps Script
 * Firebase Realtime Database
 * React
-* GitHub ページs
+* GitHub ページ
